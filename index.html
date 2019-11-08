@@ -11,17 +11,32 @@
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
 
   </head>
-  <h1>Shibe Clicker</h1>
-  <h4>Collect funds to replace the goats with shibes!</h4>
-  <div>
-    <img id = "shibePic" src="http://placegoat.com/200/200" width="200"></img>
-  </div>
 
-  <div>
-    <input id="stoplight" type="button" value="Add Funds">
-    <input id="newPic" type="button" value="New Pic (10)">
-    <p id=results>Total Funds: 0</p>
+  <body>
+    <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>Shibe Clicker</h1>
+      <h4>Collect funds to replace the goats with shibes!</h4>
+    </div>
   </div>
+      <div>
+        <img id = "shibePic" src="http://placegoat.com/200/200" width="200" class="center"></img>
+        <img id = "shibePic2" src="http://placegoat.com/200/200" width="200" class="center"></img>
+        <img id = "shibePic3" src="http://placegoat.com/200/200" width="200" class="center"></img>
+        <img id = "shibePic4" src="http://placegoat.com/200/200" width="200" class="center"></img>
+      </div>
+
+      <div>
+        <input id="stoplight" type="button" value="Add Funds">
+        <input id="newPic1" type="button" value="New Shibe(10)" title="Shibe gains 1 Fund/sec.">
+        <input id="newPic2" type="button" value="Another Shibe(15)" title="Shibe gains 1 Fund/sec.">
+        <input id="newPic3" type="button" value="Powerful Shibe(50)" title="Shibe commits stack overflow and gives you 10,000+ Funds.">
+        <input id="newPic4" type="button" value="Final Shibe(10,000)"title="All powerful.">
+
+        <p id=results>Total Funds: 0</p>
+      </div>
+</body>
 
 <script src="script.js"></script>
 </html>
