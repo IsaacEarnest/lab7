@@ -11,12 +11,12 @@ $(document).ready(function() {
   $('#newPic').click(function() {
     if(timesClicked>=10){
       $.ajax({
-        dataType: "jsonp",
-        jsonpCallback: "parseQuote",
+       crossOrigin: true,
+        dataType: "json",
         url: "http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true",
         success: function(results) {
-          console.log(results["url"]);
-          $('#shibePic').attr(results["url"][0]);
+          console.log(JSON.parse(results)[0]);
+          $('#shibePic').attr("src",JSON.parse(results)[0]);
         },
         error: function(xhr,status,error) {
           console.log(error);
@@ -27,7 +27,5 @@ $(document).ready(function() {
 
       $("#newPic").remove();
     }
-
-    });
-
+  });
 });
